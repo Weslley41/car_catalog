@@ -1,0 +1,34 @@
+#inicio, #contato {
+	background-image: url('../images/home.jpg');
+	background-size: cover;
+}
+
+#inicio #titulo {
+	font-size: 4rem;
+	padding: 3rem 0 0 3rem;
+}
+
+#inicio #descricao,
+#vendedores #descricao {
+	font-size: 1rem;
+	font-weight: 600;
+	padding: 1rem 0 0 3rem;
+}
+
+#vendedores #titulo {
+	font-size: 4rem;
+	padding: 1rem 0 0 1rem;
+}
+
+#vendedores #descricao {
+	padding-left: 1rem;
+}
+
+#botoes {
+	padding-top: 5rem;
+	padding-left: 5rem;
+}
+
+#botoes a {
+	margin: 1rem;
+}

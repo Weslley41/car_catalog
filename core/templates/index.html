@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+	{% include 'navbar.html' %}
+	{% if messages %}
+		{% for message in messages %}
+		{% if message.tags == 'success' %}
+			<div class="alert alert-success alert-dismissible fade show mb-0" role="alert">
+		{% else %}
+			<div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+		{% endif %}
+				{{ message.message }}
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		{% endfor %}
+	{% endif %}
+	<main class="flex-shrink-0 bg-dark text-light">
+		{% include 'inicio.html' %}
+		{% include 'destaques.html' %}
+		{% include 'vendedores.html' %}
+		{% include 'contato.html' %}
+	</main>
+	{% include 'footer.html' %}
+	{% include 'btn_go_top.html' %}
+	<script src="{% static 'js/script.js' %}"></script>
+{% endblock %}

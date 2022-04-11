@@ -1,0 +1,28 @@
+{% load static %}
+{% block vendedores %}
+<section class="container-fluid" id="vendedores" style="height:100vh">
+	<div class="row">
+		<div class="col-12">
+			<h1 id="titulo">Vendedores</h1>
+			<p id="descricao">
+				Conte com o melhor atentimento, fale com nossos vendedores.
+			</p>
+		</div>
+	</div>
+
+	<div class="card-group">
+		{% for vendedor in vendedores %}
+		<div class="card bg-dark">
+			<img src="{{ vendedor.foto.thumb.url }}" class="card-img-top" alt="{{ vendedor.nome }}">
+			<div class="card-body">
+				<h5 class="card-title">{{ vendedor.nome }}</h5>
+				<p class="card-text">
+					<i class="bi bi-phone"></i> {{ vendedor.telefone }}<br>
+					<i class="bi bi-envelope"></i> {{ vendedor.email }}
+				</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</section>
+{% endblock %}

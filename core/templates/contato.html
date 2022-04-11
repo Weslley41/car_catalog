@@ -1,0 +1,36 @@
+{% block contato %}
+<section class="container-fluid p-5" id="contato" style="height:100vh">
+	<div class="row">
+		<div class="col-12">
+			<h1>Contato</h1>
+			<p>
+				Curtiu o que viu? Entre em contato conosco!
+			</p>
+			<form action="{% url 'index' %}" method="POST" class="form col-6" enctype="multipart/form-data">
+				{% csrf_token %}
+				<div class="mb-3">
+					<label class="form-label" for="id_nome">Nome</label>
+					<input type="text" name="nome" maxlength="100" class="form-control" placeholder="Nome" required>
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="id_email">E-mail</label>
+					<input type="email" name="email" class="form-control" placeholder="E-mail" required>
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="id_assunto">Assunto</label>
+					<input type="text" name="assunto" maxlength="100" class="form-control" placeholder="Assunto" required>
+				</div>
+				<div class="mb-3">
+					<label class="form-label" for="id_mensagem">Mensagem</label>
+					<textarea name="mensagem" cols="40" rows="5" class="form-control" placeholder="Mensagem" required></textarea>
+				</div>
+
+				<div class="d-flex justify-content-center mb-3">
+					<button type="reset" class="btn btn-danger mx-2">Limpar</button>
+					<button type="submit" class="btn btn-primary mx-2">Enviar</button>
+				</div>
+		</form>
+		</div>
+	</div>
+</section>
+{% endblock %}
