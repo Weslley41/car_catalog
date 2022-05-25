@@ -1,4 +1,4 @@
-# Car Catalog - [online no Heroku](https://cartalog.herokuapp.com/)
+# Car Catalog
 
 Dando continuidade aos projetos para praticar conceitos vistos no curso de Django da Geek University, agora utilizando Class Based Views.
 
